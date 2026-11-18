@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+      }
+
+      article {
+        background: rgb(228, 241, 250);
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%; 
+      }
+
+      @media (min-width: 768px) {
+        section {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        article {
+          width: 25%; /* Membagi menjadi 4 kolom */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+      <article>
+        2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+      <article>
+        3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+      <article>
+        4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+      <article>
+        5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+      <article>
+        6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+    </section>
+  </body>
+</html>

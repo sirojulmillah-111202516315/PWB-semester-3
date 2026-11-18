@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, 
+initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      article {
+        background: rgb(228, 241, 250);
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.
+      </article> 
+.. ..
+    </section>
+  </body>
+</html>
