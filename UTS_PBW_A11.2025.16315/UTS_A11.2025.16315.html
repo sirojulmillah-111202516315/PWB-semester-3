@@ -63,6 +63,36 @@
 			background-color: rgb(255, 244, 222);
 			color: rgb(212, 154, 154);
 		}
+		/* Dark theme */
+		body.dark #home,
+		body.dark #article,
+		body.dark #gallery,
+		body.dark #schedule,
+		body.dark #profile,
+		body.dark footer {
+			background-color: #121212 !important;
+			color: #f1f1f1 !important;
+		}
+
+		body.dark .card {
+			background-color: #1e1e1e !important;
+			border-color: #333 !important;
+			color: #f1f1f1 !important;
+		}
+
+		body.dark .card-header {
+			background-color: #2a2a2a !important;
+			color: #f1f1f1 !important;
+		}
+
+		body.dark .table th,
+		body.dark .table td {
+			color: #f1f1f1 !important;
+		}
+
+		body.dark footer .text-dark {
+			color: #f1f1f1 !important;
+		}
 	</style>
 </head>
 
@@ -100,6 +130,14 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#profile">Profile</a>
 					</li>
+					<li class="nav-item ms-lg-3">
+					<button id="btnDark" class="btn btn-dark btn-sm" title="Dark">
+						<i class="bi bi-moon-stars-fill"></i>
+					</button>
+					<button id="btnLight" class="btn btn-danger btn-sm" title="Light">
+						<i class="bi bi-sun-fill"></i>
+					</button>
+				</li>
 				</ul>
 			</div>
 		</div>
@@ -386,7 +424,7 @@
 	<!-- footer begin -->
 	<footer class="text-center p-5">
 		<div>
-			<a href="https://www.instagram.com/srjlmlh/" target="_blank"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
+			<a href="https://www.instagram.com/srjlmlh?mdxt=azhqYWFwYnNjaDV5&utm_source=ig_contact_invite" target="_blank"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
 			<a href="https://x.com/LNGSHOT4sho" target="_blank"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
 			<a href="https://web.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
 		</div>
@@ -428,7 +466,7 @@
 		document.getElementById("tanggal").innerHTML = tanggal_full;
 		document.getElementById("jam").innerHTML = jam_full;
 	}
-		setInterval(tampilWaaktu, 1000);
+		setInterval(tampilWaktu, 1000);
 	</script>
 
 	<script type="text/javascript"> 
@@ -447,6 +485,20 @@
 	backToTop.addEventListener("click", function () {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	});
+	</script>
+	<script type="text/javascript">
+		const btnDark = document.getElementById("btnDark");
+		const btnLight = document.getElementById("btnLight");
+
+		btnDark.addEventListener("click", function () {
+			document.body.classList.add("dark");
+			document.documentElement.setAttribute("data-bs-theme", "dark");
+		});
+
+		btnLight.addEventListener("click", function () {
+			document.body.classList.remove("dark");
+			document.documentElement.setAttribute("data-bs-theme", "light");
+		});
 	</script>
    </body>
 </html>
